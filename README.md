@@ -1,10 +1,12 @@
-# poetry-meals
+# The Other World Journal
+Welcome to a journaling experience inspired by LAIKA Studio's, Coraline. With the release of their new movie, I thought it would be fun to pay bit of a homage to this absolute classic. 
 
-Hello and welcome to Poetry Meals! This is a Full Stack app utilizing CRUD, JavaScript, ejs, Node, MongoD, Passport and Render for deployment. 
+This app was made for my little sis who is learning to type, however, you can also use this as you watch the Coraline movie. You can also use it to spark your imagination. 
 
-This app is a simple meal tracker -- it does not count calories or provide any nutritional comments/suggestions. You should not use this in place of a doctor or for medical purposes. 
+The Other World Journal was created using these: 
+    -CRUD
+    -Express, 
+    -Node.js, 
+    Passport
 
-Poetry tracker allows you to enter meals you have eaten and then asks you to write a poem. There are no requirements for the length, type or content of the poem. Did you enjoy your meal? Was the food mid but the surroundings and people made it taste great? Write a poem about it! 
-
-Please visit: to view this app. 
-
+You can use this app here: 

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="/style.css">
+</head>
+    <title>Edit Discovery</title>
+</head>
+<body>
+<header class="site-header">
+
+        <!--navigation starts -->
+    <nav class="site-nav">
+        <a class="brand" href="/">
+    <img src="/journal-logo.png" alt="logo for the Website.">
+        <span>The Other World Journal</span>
+        </a>
+        
+        <ul class="nav-links">
+            <li><a href="/login">Login</a></li>
+            <li><a href="/signup">Signup</a></li>
+            <li><a href="/">View Discoveries</a></li>
+            <li><a href="/discoveries/new">Add Discovery</a></li>
+        
+        </ul>
+    </nav>
+
+
+   
+
+    
+<!-- When editing, you need to give them the same form that they used to add the meals; they are editing the same form-->
+    <h3>Edit Discovery</h3>
+
+
+
+    <!-- This is the start of the edit form-->
+
+    <!--This is where the user makes edits to the form to change their answers-->
+    <form action="/discoveries/<%=discovery._id %>?_method=PUT" method="POST">
+    <label for="title">What did you discover?</label>
+    <input type="text" name="title" id="title" value="<%= discovery.title %>" required>
+    <label for="location">Where did you find it?</label>
+    <input type="text" name="location" id="location" value="<%= discovery.location %>" required> 
+
+
+   <label for="discoveredOn">When did you disover it?</label>
+    <input type="date" name="discoveredOn" id="discoveredOn" value="<%= discovery.discoveredOn.toISOString().slice(0, 10) %>" required> 
+
+       
+        <label for="description"> Describe what happened: </label>
+   <textarea name="description" id="description" rows="8" value="<%= discovery.description %>"required></textarea>
+    </label>
+
+    <label for="mood">What feeling did it create?</label>
+    <select name="mood" id="mood" required> 
+        <option value="curious" <%= discovery.mood === 'curious' ? 'selected' : '' %>>Curious</option>
+        <option value="eerie" <%= discovery.mood === 'eerie' ? 'selected' : '' %>>Eerie</option>
+        <option value="dangerous" <%= discovery.mood === 'dangerous' ? 'selected' : '' %>>Dangerous</option>
+        <option value="beautiful" <%= discovery.mood === 'beautiful' ? 'selected' : '' %>>Beautiful</option>
+        <option value="mysterious" <%= discovery.mood === 'mysterious' ? 'selected' : '' %>>>Mysterious</option>
+    </select>
+
+
+       <!-- meal ratings start here-->
+       <label for="braveryRating">How brave did you feel?</label>
+       <select name="braveryRating" id="braveryRating" required>
+            <option value="1" <%= discovery.braveryRating === 1 ? 'selected' : '' %>> One Star</option>
+            <option value="2" <%= discovery.braveryRating === 2 ? 'selected' : '' %>>Two Stars</option>
+            <option value="3" <%= discovery.braveryRating === 3 ? 'selected' : '' %>>Three Stars</option>
+            <option value="4" <%= discovery.braveryRating === 4 ? 'selected' : '' %>>Four Stars</option>
+            <option value="5" <%= discovery.braveryRating ===  5 ? 'selected' : '' %>>Five Stars</option>
+       </select>
+
+
+       <label for="warning">What warning will you leave for another?</label>
+       <textarea name="warning" id="warning" rows="5" required><%=discovery.warning %></textarea>
+       <!-- button to submit is here-->
+       <button type="submit">Save Changes</button>
+    </form> 
+
+</body>
+</html>

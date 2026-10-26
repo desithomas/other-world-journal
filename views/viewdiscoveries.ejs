@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="/style.css">
+    <title>Discoveries</title>
+</head> 
+  
+    
+
+<body>
+
+<header class="site-header">
+
+        <!--navigation starts -->
+    <nav class="site-nav">
+        <a class="brand" href="/">
+             <img src="/journal-logo.png" alt="logo for the Website.">
+        <span>The Other World Journal</span>
+        </a>
+        
+        <ul class="nav-links">
+            <li><a href="/login">Login</a></li>
+            <li><a href="/signup">Signup</a></li>
+            <li><a href="/discoveries">View Discoveries</a></li>
+            <li><a href="/discoveries/new">Add Discovery</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <!-- On this page: 
+     My header, etc 
+     I need to be able to have all of the meals displayed. This is ejs and not html, so I don't need to use the DOM for everything here 
+     advice: -->
+    
+ <main class="container">
+<h1> My Discoveries </h1>
+    <% discoveries.forEach(function(discovery) { %>
+    <article class="discovery-card">    
+    <h2><%= discovery.title %></strong></p>
+
+    <p><strong>Location:</strong><%= discovery.location %></p>
+    <p><strong>Date discovered: </strong><%= discovery.discoveredOn.toDateString() %></p>
+   <p><strong>Mood:</strong><%= discovery.mood %></p>
+    <p><strong> Bravery Rating</strong><%= discovery.braveryRating %></p>
+    <p><strong>Description: </strong><%= discovery.description %></p>
+    <p><strong>Warning: </strong><%= discovery.warning %></p>
+
+
+
+
+    <div class="discovery-actions">
+    <a href="/discoveries/<%= discovery._id %>/edit"> Edit this discovery</a>
+    <form action="/discoveries/<%= discovery._id %>?_method=DELETE" method="POST"> 
+        <button type="submit">Delete this discovery</button> 
+
+    </form>
+      <% }); %>
+     </div>
+    </article>
+
+   
+</body>
+</html>

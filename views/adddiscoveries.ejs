@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="/style.css">
+</head>
+    <title>Add a new discovery</title>
+</head>
+<body>
+
+<header class="site-header">
+
+
+        <!--navigation starts -->
+    <nav class="site-nav">
+        <a class="brand" href="/">
+            <img src="/journal-logo.png" alt="logo for the Website.">
+        <span>The Other World Journal</span>
+        </a>
+        
+        <ul class="nav-links">
+            <li><a href="/login">Login</a></li>
+            <li><a href="/signup">Signup</a></li>
+            <li><a href="/discoveries">View Discoveries</a></li>
+            <li><a href="/discoveries/new">Add Discoveries</a></li>
+        
+        </ul>
+    </nav>
+</header> 
+
+<main class="container">
+    <h1>Write your discovery</h1>
+
+
+
+    <!--make the form to add the meal
+        * different meal times: breakfast lunch dinner snack morning snack grazing emotional eating
+        * date: 
+        *where the user got/made the meal: home, ordered via app/delivery, went out to eat
+        *rating: 1 - 5 stars 
+        *place to list the ingredients 
+        *place to put the poem 
+        *submit button for the form 
+        
+        - where is all of this information going to go? To the /meals/new routes 
+            * what kind of CRUD operation is this? POST
+            
+        - the names in the form can not be the same because they are used by Express to see which values are being submitted. 
+        
+         write your poem here. This is an example:
+
+            "Upon my lips did I taste
+            but the sweetest essence of life
+            an apple red and firm 
+            Gala perhaps --
+            organic and true"
+        -->
+
+   
+
+    <!--choice form-->
+    <form action="/discoveries/new" method="POST">
+       <label for="title">What did you discover?</label>
+        <input type="text" name="title" id="title" placeholder="A doll that looks just like you...">
+
+   <label for="location">Where did you find it?</label>
+   <input type="text" name="location" id="location" placeholder="On the back porch..." required></input>
+
+   <label for="discoveredOn">When did you find it?</label>
+   <input type="date" name="discoveredOn" id="discoveredOn"   required></input>
+
+    <label for="description" required>Describe what happened</label>
+        <textarea id="description" name="description" rows="8" cols="100" placeholder="Describe the World you have found." required></textarea>
+    </label>
+
+    <label for="mood">What feeling did it create?</label>
+       <select name="mood" id="mood" required>
+            <option value="">Choose a mood</option>
+            <option value="curious" >Curious</option>
+            <option value="eerie" >Eerie</option>
+            <option value="dangerous" >Dangerous</option>
+            <option value="beautiful" >Beautiful</option>
+            <option value="mysterious" >Mysterious</option>
+       </select>
+
+
+       <label for="braveryRating">How brave did you feel out of 5 stars</label>
+       <select name="braveryRating" id="braveryRating">
+            
+           
+            <option value="1">Not very brave</option>
+            <option value="2">A little brave</option>
+            <option value="3">Somewhat brave</option>
+            <option value="4">Very brave</option>
+            <option value="5">Extremely brave</option>
+       </select>
+
+       <label for="warning">What warning would you leave for another?</label>
+   <textarea name="warning" id="warning" rows="5" placeholder="The hand seeks the Key." required></textarea>
+
+       <button class="button" type="submit">Save Discovery</button>
+    </form> 
+</main>
+</body>
+</html>

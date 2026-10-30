@@ -7,8 +7,9 @@ The Other World Journal was created using these:
     -CRUD
     -Express, 
     -Node.js, 
-    Passport
+    -Passport
 
-You can use this app here: 
+This app is hosted via Render. Please visit it's website here: 
 
 <img width="1620" height="526" alt="Screenshot 2026-10-26 at 6 29 53 PM" src="https://github.com/user-attachments/assets/36c38b36-3368-4b36-b8d5-1bee7a7ee77f" />
+

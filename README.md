@@ -46,6 +46,6 @@ npm start
 ```
 
 5. **Local browser view:**
-*Go to http://localhost:8081 
+* Go to http://localhost:8081 
 
 Viola! Please enjoy this Coraline themed application.

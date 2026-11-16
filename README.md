@@ -12,7 +12,7 @@ A private journaling app with a Coraline-inspired theme. Create an account, sign
 * **EJS:** Server side page rendering.
 * **MVC Architecture:** Structured with views, config, and public directories.
 
-* <img width="1620" height="526" alt="Screenshot 2026-10-26 at 6 29 53 PM" src="https://github.com/user-attachments/assets/36c38b36-3368-4b36-b8d5-1bee7a7ee77f" />
+<img width="1620" height="526" alt="Screenshot 2026-10-26 at 6 29 53 PM" src="https://github.com/user-attachments/assets/36c38b36-3368-4b36-b8d5-1bee7a7ee77f" />
 
 ## View on website
  
